@@ -10,9 +10,9 @@ int main(int argc, char* argv []){
             cout << argv[i] << endl;
         }
     }
-    string in;
-    cin >> in;
+    string line;
+    getline(cin, line);
     sleep(2);
-    cout << in << endl;
+    cout << line << endl;
     return 0;
 }
