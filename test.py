@@ -66,15 +66,8 @@ class Tester:
          
     def run_batch(self):
         pass
-    
-in_folder_path = "datapub"
-out_folder_path = "datapub"
+
 
 if __name__ == '__main__':
     blob = Tester()
     blob.run()
-    
-
-
-
-
