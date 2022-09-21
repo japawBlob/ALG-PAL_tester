@@ -3,10 +3,11 @@
 title = "alg-pal tester"
 
 [program]
+# name of executalbe you want to run
 exe_name = "a.out"
 language = "C++"
 
-# supported platforms are "native" for running program directly and "wsl" for running program in wsl
+# supported platforms are "native" for running program directly and "wsl" for running program in Windows subsystem for linux
 platform = "wsl"
 compilator = "clang++"
 
