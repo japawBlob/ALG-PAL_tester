@@ -1,0 +1,17 @@
+# config file for ALG-PAL tester
+
+title = "alg-pal tester"
+
+[program]
+exe_name = "a.out"
+language = "C++"
+
+# supported platforms are "native" for running program directly and "wsl" for running program in wsl
+platform = "wsl"
+compilator = "clang++"
+
+[datapub_folder]
+in = "datapub"
+out = "datapub"
+
+
