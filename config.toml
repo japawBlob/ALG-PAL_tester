@@ -8,11 +8,9 @@ exe_name = "a.out"
 language = "C++"
 
 # supported platforms are "native" for running program directly and "wsl" for running program in Windows subsystem for linux
-platform = "wsl"
+platform = "native"
 compilator = "clang++"
 
 [datapub_folder]
 in = "datapub"
 out = "datapub"
-
-

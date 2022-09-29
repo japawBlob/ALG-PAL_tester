@@ -9,7 +9,6 @@ import toml
 
 class Tester:
     def __init__(self):
-        print("hey")
         self.exe_name : str = ""
         self.language : str = ""
         self.platform : str = ""
@@ -46,8 +45,8 @@ class Tester:
         while True:
             p = subprocess.Popen(command, stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
             i = str(test_file_number).zfill(2)
-            test_file_in = os.path.join(in_folder_path, "pub" + i + ".in")
-            test_file_out = os.path.join(in_folder_path, "pub" + i + ".out")
+            test_file_in = os.path.join(self.data_in, "pub" + i + ".in")
+            test_file_out = os.path.join(self.data_out, "pub" + i + ".out")
             try:
                 with open(test_file_in, "r") as data_in:
                     data = data_in.read()
@@ -59,7 +58,7 @@ class Tester:
                         assert solution == bytes(correct_out, encoding="UTF-8")
                         print("solution for file ", test_file_number, " is OK")
                     except AssertionError:
-                        print("solutions for ", test_file_number, " don't match")
+                        print("solution for file ", test_file_number, " don't match")
             except FileNotFoundError:
                 break
             test_file_number += 1
